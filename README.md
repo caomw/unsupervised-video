@@ -7,7 +7,7 @@ Facebook AI Research (FAIR)<br/>
 
 <img src="images/overview.jpg" width="550">
 
-This is the code for our [CVPR 2017 paper on Unsupervised Learning using unlabelled videos](http://cs.berkeley.edu/~pathak/unsupervised_video/). This repo contains models trained by the unsupervised motion grouping algorithm both in Caffe and Torch. If you find this work useful in your research, please cite:
+This is the code for our [CVPR 2017 paper on Unsupervised Learning using unlabeled videos](http://cs.berkeley.edu/~pathak/unsupervised_video/). This repository contains models trained by the unsupervised motion grouping algorithm both in Caffe and Torch. If you find this work useful in your research, please cite:
 
     @inproceedings{pathakCVPR16context,
         Author = {Pathak, Deepak and Girshick, Ross and Doll\'{a}r, Piotr and Darrell, Trevor and Hariharan, Bharath},
@@ -29,6 +29,7 @@ This is the code for our [CVPR 2017 paper on Unsupervised Learning using unlabel
   bash ./models/download_caffe_models.sh
   # This will populate the `./models/` folder with trained models.
   ```
+  The models were initially trained in Torch and then converted to caffe. Hence, if you are using caffe fast-rcnn then include `image_transform_layer.py` in your caffe. It converts the scale and mean of the input image as needed.
 
 3. Fetch torch models
   ```Shell
